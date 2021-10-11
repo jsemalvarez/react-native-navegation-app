@@ -2,13 +2,14 @@ import React from 'react'
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-import { Tab1Screen } from './Tab1Screen';
-import { Tab2Screen } from './Tab2Screen';
-// import { Tab3Screen } from './Tab3Screen';
+import { Tab1Screen } from '../screens/Tab1Screen';
+// import { Tab2Screen } from '../screens/Tab2Screen';
+// import { Tab3Screen } from '../screens/Tab3Screen';
 import { StackNavigator } from './StackNavigator';
 import { colores } from '../theme/appTheme';
-import { Text, Platform } from 'react-native';
+import { Platform } from 'react-native';
 import { TopTabNavigator } from './TopTabNavigator';
 
 
@@ -36,23 +37,23 @@ const TabsAndroid = () => {
           borderTopWidth: 0,
           elevation: 0,
         },
-        tabBarIcon: ( props) => {
+        tabBarIcon: ( { color, focused } ) => {
 
           let iconName: string = ''
 
           switch( route.name ){
             case 'Tab1Screen':
-              iconName = 'T1'
+              iconName = 'bandage-outline'
               break
             case 'Tab2Screen':
-              iconName = 'T2'
+              iconName = 'basketball-outline'
               break
             case 'StackNavigator':
-              iconName = 'ST'
+              iconName = 'bookmarks-outline'
               break
           }
 
-          return <Text style={{ color: props.color }}> { iconName } </Text>
+          return <Icon name={ iconName } size={20} color={ color } />
         }
       })}
     >
@@ -78,23 +79,23 @@ const TabIOS = () => {
           borderTopWidth: 0,
           elevation: 0,
         },
-        tabBarIcon: ( props) => {
+        tabBarIcon: ( { color, focused, size} ) => {
 
           let iconName: string = ''
 
           switch( route.name ){
             case 'Tab1Screen':
-              iconName = 'T1'
+              iconName = 'bandage-outline'
               break
             case 'Tab2Screen':
-              iconName = 'T2'
+              iconName = 'basketball-outline'
               break
             case 'StackNavigator':
-              iconName = 'ST'
+              iconName = 'bookmarks-outline'
               break
           }
 
-          return <Text style={{ color: props.color }}>{ iconName }</Text>
+          return <Icon name={ iconName } size={30} color={ color } />
         }
       })}
       

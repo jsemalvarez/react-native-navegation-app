@@ -24,7 +24,12 @@ Nota:  pager view lo instale de forma manual, ay que no se intalo que el resto d
 ```
 
 
+## ICONOS
 
+[Android](https://github.com/oblador/react-native-vector-icons)
+
+
+[ionicons](https://ionic.io/ionicons)
 
 
 ```
