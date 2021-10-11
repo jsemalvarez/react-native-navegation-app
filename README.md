@@ -14,6 +14,18 @@ Hay una diferencia de animaciones entre IOS y Android en los tabs, por eso, para
 
 ### Material Top Navigator
 
+[Documentacion](https://reactnavigation.org/docs/material-top-tab-navigator/)
+
+
+Nota:  pager view lo instale de forma manual, ay que no se intalo que el resto de los paquetes
+
+```
+    npm i react-native-pager-view
+```
+
+
+
+
 
 ```
     npx react-native run-android
